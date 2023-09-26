@@ -11,7 +11,7 @@ export const Access = () => {
                     <span className="exception-name">ACCESS</span> DENIED
                 </h1>
                 <p>You don't have the necessary permissions.</p>
-                <a href="/#">Back to Dashboard</a>
+                <a href="/dashboard">Back to Dashboard</a>
             </div>
         </div>
     );

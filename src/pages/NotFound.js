@@ -11,7 +11,7 @@ export const NotFound = () => {
                     <span className="exception-name">PAGE</span> NOT FOUND
                 </h1>
                 <p>Requested resource is not available.</p>
-                <a href="/#">Back to Dashboard</a>
+                <a href="/dashboard">Back to Dashboard</a>
             </div>
         </div>
     );

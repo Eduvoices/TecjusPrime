@@ -1,7 +1,9 @@
 import React from 'react';
 import { useRef, useState } from 'react'
 
-import './styles.css'
+// import './styles.js'
+
+import * as S from './styles'
 
 const Invoice = () => {
     const [senhaAtual, setSenhaAtual] = useState('')
@@ -44,22 +46,22 @@ const Invoice = () => {
     }
 
     return (
-    <div className='container'>
-        <div className='container-senha'>
-            <div className='wrapper'>
+    <S.Container className='container'>
+        <S.ContainerSenha className='container-senha'>
+            <S.Wrapper className='wrapper'>
 
-                <i className="pi pi-sign-out" id='exit'></i>
+                <S.Exit className="pi pi-sign-out" id='exit'></S.Exit>
 
-                <div className='form-title'>
+                <S.FormTitle className='form-title'>
                     Alterar Senha
-                </div>
+                </S.FormTitle>
 
-                <div className='form-title'>
-                    <span id='required'>*Campo obrigatório</span>
-                </div>
+                <S.FormTitle className='form-title'>
+                    <S.Required id='required'>*Campo obrigatório</S.Required>
+                </S.FormTitle>
 
-                <form className='senha-form'>
-                    <div className='wrap-input'>
+                <S.SenhaForm className='senha-form'>
+                    <S.WrapInput className='wrap-input'>
                         <input
                         type="password"
                         id='senha-atual'
@@ -71,10 +73,10 @@ const Invoice = () => {
                         onKeyDown={handleEnter}
                         />
                         {senhaAtual !== novaSenha || !senhaAtual ? (<span />) : (<p>A nova senha não pode ser igual à anterior.</p>)}
-                        <label className='focus-input' htmlFor="senha-atual" data-placeholder='Senha Atual*'></label>
-                    </div>
+                        <S.FocusInput className='focus-input' htmlFor="senha-atual" data-placeholder='Senha Atual*'></S.FocusInput>
+                    </S.WrapInput>
 
-                    <div className='wrap-input'>
+                    <S.WrapInput className='wrap-input'>
                         <input
                         type="password"
                         id='nova-senha'
@@ -85,10 +87,10 @@ const Invoice = () => {
                         ref={refNovaSenha}
                         onBlur={(e) => setNovaSenha(e.target.value)}
                         />
-                        <label className='focus-input' htmlFor="nova-senha" data-placeholder='Nova Senha*'></label>
-                    </div>
+                        <S.FocusInput className='focus-input' htmlFor="nova-senha" data-placeholder='Nova Senha*'></S.FocusInput>
+                    </S.WrapInput>
 
-                    <div className='wrap-input'>
+                    <S.WrapInput className='wrap-input'>
                         <input
                         type="password"
                         id='confirma-senha'
@@ -100,24 +102,24 @@ const Invoice = () => {
                         onChange={(e) => setConfirmaSenha(e.target.value)}
                         />
                         {confirmaSenha === novaSenha || !confirmaSenha ? (<span />) : (<p>Digite uma senha igual</p>)}
-                        <label className='focus-input' htmlFor="confirma-senha" data-placeholder='Confirmar Senha*'></label>
-                    </div>
+                        <S.FocusInput className='focus-input' htmlFor="confirma-senha" data-placeholder='Confirmar Senha*'></S.FocusInput>
+                    </S.WrapInput>
 
-                    <div className='button-row'>
-                        <button type='button' className={!enableBtn() ? 'form-btn' : 'form-btn disabled'} disabled={enableBtn()} ref={refBtn}>
+                    <S.ButtonRow className='button-row'>
+                        <S.FormBtn type='button' className={!enableBtn() ? 'form-btn' : 'form-btn disabled'} disabled={enableBtn()} ref={refBtn}>
                             <i className="pi pi-check"></i>
                             Confirmar
-                        </button>
+                        </S.FormBtn>
 
-                        <button type='reset' onClick={clear} className='form-btn'>
+                        <S.FormBtn type='reset' onClick={clear} className='form-btn'>
                             <i className="pi pi-times"></i>
                             Cancelar
-                        </button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
+                        </S.FormBtn>
+                    </S.ButtonRow>
+                </S.SenhaForm>
+            </S.Wrapper>
+        </S.ContainerSenha>
+    </S.Container>
     );
 };
 

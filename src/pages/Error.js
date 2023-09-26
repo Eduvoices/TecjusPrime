@@ -11,7 +11,7 @@ export const Error = () => {
                     <span className="exception-name">ERROR</span> OCCURRED
                 </h1>
                 <p>Something went wrong.</p>
-                <a href="/#">Back to Dashboard</a>
+                <a href="/dashboard">Back to Dashboard</a>
             </div>
         </div>
     );

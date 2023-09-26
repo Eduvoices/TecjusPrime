@@ -1,6 +1,7 @@
 import React from 'react';
 import { classNames } from 'primereact/utils';
 import { useNavigate } from 'react-router-dom';
+import logo from '../src/assets/logo-white.png'
 
 const AppTopbar = (props) => {
     const navigate = useNavigate();
@@ -15,7 +16,7 @@ const AppTopbar = (props) => {
     return (
         <div className="layout-topbar">
             <button className="layout-topbar-logo p-link" onClick={() => navigate('/')}>
-                <img id="layout-topbar-logo" src="assets/layout/images/logo-white.png" alt="babylon-layout" />
+                <img id="layout-topbar-logo" src={logo} alt="babylon-layout" />
             </button>
 
             <button className="layout-menu-button p-link" onClick={props.onMenuButtonClick}>

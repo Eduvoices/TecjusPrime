@@ -285,7 +285,7 @@ const menu = [
                     <pre className="app-code">
                         <code>
                             {`
-$primaryColor: #2196F3 !default;
+$primaryColor: #4b453d !default;
 $primaryLightColor: scale-color($primaryColor, $lightness: 60%) !default;
 $primaryDarkColor: scale-color($primaryColor, $lightness: -10%) !default;
 $primaryDarkerColor: scale-color($primaryColor, $lightness: -20%) !default;
@@ -354,7 +354,7 @@ sass --watch public/assets:public/assets
                             <code>
                                 {`
 $colors: (
-    "blue": #2196F3,
+    "blue": #4b453d,
     "green": #4caf50,
     "yellow": #FBC02D,
     "cyan": #00BCD4,

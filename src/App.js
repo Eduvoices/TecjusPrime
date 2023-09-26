@@ -38,6 +38,8 @@ import EmptyPage from './pages/EmptyPage';
 import PrimeReact from 'primereact/api';
 import { Tooltip } from 'primereact/tooltip';
 
+import logo from '../src/assets/logo-white.png'
+
 import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
 import 'primeflex/primeflex.css';
@@ -103,7 +105,7 @@ const App = () => {
         {
             label: 'Home Page',
             icon: 'pi pi-fw pi-home',
-            items: [{ label: 'Dashboard', icon: 'pi pi-fw pi-home', to: '/' }]
+            items: [{ label: 'Dashboard', icon: 'pi pi-fw pi-home', to: '/dashboard' }]
         },
         {
             label: 'UI Kit',
@@ -446,7 +448,7 @@ const App = () => {
             <div className={menuContainerClassName} onClick={onMenuClick}>
                 <div className="layout-menu-logo">
                     <button className="p-link" onClick={() => navigate('/')}>
-                        <img id="layout-menu-logo" src="assets/layout/images/logo-white.png" library="babylon-layout" alt="babylon-logo" />
+                        <img id="layout-menu-logo" src={logo} library="babylon-layout" alt="babylon-logo" />
                     </button>
                 </div>
                 <div className="layout-menu-wrapper">

@@ -8,7 +8,7 @@ const AppConfig = (props) => {
 
     const componentThemes = [
         { name: 'Amber Accent', file: 'amber', color: '#FFC107' },
-        { name: 'Blue Accent', file: 'blue', color: '#2196F3' },
+        { name: 'Blue Accent', file: 'blue', color: '#4b453d' },
         { name: 'Blue Gray Accent', file: 'bluegray', color: '#607D8B' },
         { name: 'Brown Accent', file: 'brown', color: '#795548' },
         { name: 'Cyan Accent', file: 'cyan', color: '#00BCD4' },
