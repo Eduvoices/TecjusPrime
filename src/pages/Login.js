@@ -31,7 +31,7 @@ export const Login = () => {
                 <Button
                     label="Sign In"
                     onClick={() => {
-                        navigate('/');
+                        navigate('/dashboard');
                     }}
                 />
             </div>

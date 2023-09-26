@@ -16,7 +16,7 @@ const AppWrapper = () => {
 
     return (
         <Routes>
-            <Route path="/login" element={<Login />} />
+            <Route path="/" element={<Login />} />
             <Route path="/error" element={<Error />} />
             <Route path="/notfound" element={<NotFound />} />
             <Route path="/access" element={<Access />} />

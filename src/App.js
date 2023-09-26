@@ -32,7 +32,7 @@ import BlocksDemo from './components/BlocksDemo';
 import CrudDemo from './pages/CrudDemo';
 import CalendarDemo from './pages/CalendarDemo';
 import TimelineDemo from './pages/TimelineDemo';
-import Invoice from './pages/Invoice';
+import Invoice from './pages/AlteraSenha/Invoice';
 import Help from './pages/Help';
 import EmptyPage from './pages/EmptyPage';
 import PrimeReact from 'primereact/api';
@@ -68,7 +68,7 @@ const App = () => {
     let inlineMenuClick = false;
 
     const breadcrumb = [
-        { path: '/', parent: 'Dashboard', label: 'Dashboard' },
+        { path: '/dashboard', parent: 'Dashboard', label: 'Dashboard' },
         { path: '/formlayout', parent: 'UI Kit', label: 'Form Layout' },
         { path: '/input', parent: 'UI Kit', label: 'Input' },
         { path: '/floatlabel', parent: 'UI Kit', label: 'Float Label' },
@@ -93,7 +93,7 @@ const App = () => {
         { path: '/crud', parent: 'Utilities', label: 'Crud' },
         { path: '/calendar', parent: 'PrimeBlocks', label: 'Calendar' },
         { path: '/timeline', parent: 'Pages', label: 'Timeline' },
-        { path: '/invoice', parent: 'Pages', label: 'Invoice' },
+        { path: '/alterasenha', parent: 'Pages', label: 'alterasenha' },
         { path: '/help', parent: 'Pages', label: 'Help' },
         { path: '/empty', parent: 'Pages', label: 'Empty Page' },
         { path: '/documentation', parent: 'Pages', label: 'Documentation' }
@@ -151,8 +151,8 @@ const App = () => {
                 { label: 'Calendar', icon: 'pi pi-fw pi-calendar-plus', to: '/calendar' },
                 { label: 'Timeline', icon: 'pi pi-fw pi-calendar', to: '/timeline' },
                 { label: 'Landing', icon: 'pi pi-fw pi-user-plus', url: 'assets/pages/landing.html', target: '_blank' },
-                { label: 'Login', icon: 'pi pi-fw pi-sign-in', to: '/login' },
-                { label: 'Invoice', icon: 'pi pi-fw pi-dollar', to: '/invoice' },
+                { label: 'Login', icon: 'pi pi-fw pi-sign-in', to: '/' },
+                { label: 'Alterar Senha', icon: 'pi pi-fw pi-lock', to: '/alterasenha' },
                 { label: 'Help', icon: 'pi pi-fw pi-question-circle', to: '/help' },
                 { label: 'Wizard', icon: 'pi pi-fw pi-star-fill', to: '/wizard' },
                 { label: 'Error', icon: 'pi pi-fw pi-times-circle', to: '/error' },
@@ -462,7 +462,7 @@ const App = () => {
 
                 <div className="layout-content">
                     <Routes>
-                        <Route path="/" element={<Dashboard />} />
+                        <Route path="/dashboard" element={<Dashboard />} />
                         <Route path="/formlayout" element={<FormLayoutDemo />} />
                         <Route path="/input" element={<InputDemo />} />
                         <Route path="/floatlabel" element={<FloatLabelDemo />} />
@@ -484,7 +484,7 @@ const App = () => {
                         <Route path="/crud" element={<CrudDemo />} />
                         <Route path="/calendar" element={<CalendarDemo />} />
                         <Route path="/timeline" element={<TimelineDemo />} />
-                        <Route path="/invoice" element={<Invoice />} />
+                        <Route path="/alterasenha" element={<Invoice />} />
                         <Route path="/help" element={<Help />} />
                         <Route path="/empty" element={<EmptyPage />} />
                         <Route path="/documentation" element={<Documentation />} />
